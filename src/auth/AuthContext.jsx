@@ -24,6 +24,7 @@ export function AuthProvider({ children }) {
     const result = await response.json();
     if (!response.ok) throw result;
     setToken(result.token);
+    console.log(result.token);
   };
 
   const login = async (credentials) => {
@@ -37,6 +38,7 @@ export function AuthProvider({ children }) {
     const result = await response.json();
     if (!response.ok) throw result;
     setToken(result.token);
+    console.log(result.token);
   };
 
   const logout = () => setToken(null);
